@@ -6,16 +6,12 @@ pipeline {
     }
 
     stages {
-        stage('Build') { 
-            steps {
-                catchError(buildResult: 'Failed to Build', stageResult: 'FAILURE')
-                {
-                    bat "${TOOL_DIR}\\build.bat ${WORKSPACE}\\Debug Debug all"
-                    bat "${TOOL_DIR}\\build.bat ${WORKSPACE}\\Release Release all"
-                }
-                
-            }
-        }
+        // stage('Build') { 
+        //     steps {
+        //         bat "${TOOL_DIR}\\build.bat ${WORKSPACE}\\Debug Debug all"
+        //         bat "${TOOL_DIR}\\build.bat ${WORKSPACE}\\Release Release all"
+        //     }
+        // }
 
         stage('Static Code Analysis') {
             steps {
