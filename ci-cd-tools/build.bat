@@ -20,7 +20,7 @@ set PATH=C:\ST\STM32CubeIDE_1.6.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.
 
 set compiler_prefix=arm-none-eabi-
 
-set "version_file=..\App\gpio-app\version.h"
+set "version_file=..\version.h"
 
 if [%BUILD_TAG%]==[] goto :do_make
 
